@@ -1,0 +1,162 @@
+[
+  {
+    "player_name": "Shakib Al Hasan",
+    "player_image": "https://placehold.co/400x400?text=Shakib+Al+Hasan",
+    "player_origin": "Bangladesh",
+    "player_category": "All-Rounder",
+    "player_speciality": "Left-hand Bat / Left-arm Spin",
+    "player_price": 900000
+  },
+  {
+    "player_name": "Tamim Iqbal",
+    "player_image": "https://placehold.co/400x400?text=Tamim+Iqbal",
+    "player_origin": "Bangladesh",
+    "player_category": "Batsman",
+    "player_speciality": "Left-hand Opening Batter",
+    "player_price": 750000
+  },
+  {
+    "player_name": "Taskin Ahmed",
+    "player_image": "https://placehold.co/400x400?text=Taskin+Ahmed",
+    "player_origin": "Bangladesh",
+    "player_category": "Bowler",
+    "player_speciality": "Right-arm Fast Bowler",
+    "player_price": 700000
+  },
+  {
+    "player_name": "Mustafizur Rahman",
+    "player_image": "https://placehold.co/400x400?text=Mustafizur+Rahman",
+    "player_origin": "Bangladesh",
+    "player_category": "Bowler",
+    "player_speciality": "Left-arm Fast-Medium / Cutter",
+    "player_price": 800000
+  },
+  {
+    "player_name": "Litton Das",
+    "player_image": "https://placehold.co/400x400?text=Litton+Das",
+    "player_origin": "Bangladesh",
+    "player_category": "Wicketkeeper",
+    "player_speciality": "Right-hand Batter / Wicketkeeper",
+    "player_price": 650000
+  },
+  {
+    "player_name": "Virat Kohli",
+    "player_image": "https://placehold.co/400x400?text=Virat+Kohli",
+    "player_origin": "India",
+    "player_category": "Batsman",
+    "player_speciality": "Right-hand Top-order Batter",
+    "player_price": 1200000
+  },
+  {
+    "player_name": "Rohit Sharma",
+    "player_image": "https://placehold.co/400x400?text=Rohit+Sharma",
+    "player_origin": "India",
+    "player_category": "Batsman",
+    "player_speciality": "Right-hand Opening Batter",
+    "player_price": 1100000
+  },
+  {
+    "player_name": "Jasprit Bumrah",
+    "player_image": "https://placehold.co/400x400?text=Jasprit+Bumrah",
+    "player_origin": "India",
+    "player_category": "Bowler",
+    "player_speciality": "Right-arm Fast Bowler",
+    "player_price": 1150000
+  },
+  {
+    "player_name": "Hardik Pandya",
+    "player_image": "https://placehold.co/400x400?text=Hardik+Pandya",
+    "player_origin": "India",
+    "player_category": "All-Rounder",
+    "player_speciality": "Power Hitter / Right-arm Fast-Medium",
+    "player_price": 1000000
+  },
+  {
+    "player_name": "Babar Azam",
+    "player_image": "https://placehold.co/400x400?text=Babar+Azam",
+    "player_origin": "Pakistan",
+    "player_category": "Batsman",
+    "player_speciality": "Right-hand Top-order Batter",
+    "player_price": 1050000
+  },
+  {
+    "player_name": "Shaheen Shah Afridi",
+    "player_image": "https://placehold.co/400x400?text=Shaheen+Afridi",
+    "player_origin": "Pakistan",
+    "player_category": "Bowler",
+    "player_speciality": "Left-arm Fast Bowler",
+    "player_price": 950000
+  },
+  {
+    "player_name": "Mohammad Rizwan",
+    "player_image": "https://placehold.co/400x400?text=Mohammad+Rizwan",
+    "player_origin": "Pakistan",
+    "player_category": "Wicketkeeper",
+    "player_speciality": "Right-hand Batter / Wicketkeeper",
+    "player_price": 850000
+  },
+  {
+    "player_name": "Jos Buttler",
+    "player_image": "https://placehold.co/400x400?text=Jos+Buttler",
+    "player_origin": "England",
+    "player_category": "Wicketkeeper",
+    "player_speciality": "Power Hitter / Wicketkeeper",
+    "player_price": 1000000
+  },
+  {
+    "player_name": "Ben Stokes",
+    "player_image": "https://placehold.co/400x400?text=Ben+Stokes",
+    "player_origin": "England",
+    "player_category": "All-Rounder",
+    "player_speciality": "Left-hand Bat / Right-arm Fast-Medium",
+    "player_price": 1100000
+  },
+  {
+    "player_name": "Rashid Khan",
+    "player_image": "https://placehold.co/400x400?text=Rashid+Khan",
+    "player_origin": "Afghanistan",
+    "player_category": "Bowler",
+    "player_speciality": "Right-arm Leg Spin",
+    "player_price": 1050000
+  },
+  {
+    "player_name": "Glenn Maxwell",
+    "player_image": "https://placehold.co/400x400?text=Glenn+Maxwell",
+    "player_origin": "Australia",
+    "player_category": "All-Rounder",
+    "player_speciality": "Power Hitter / Off Spin",
+    "player_price": 950000
+  },
+  {
+    "player_name": "Pat Cummins",
+    "player_image": "https://placehold.co/400x400?text=Pat+Cummins",
+    "player_origin": "Australia",
+    "player_category": "Bowler",
+    "player_speciality": "Right-arm Fast Bowler",
+    "player_price": 1000000
+  },
+  {
+    "player_name": "Travis Head",
+    "player_image": "https://placehold.co/400x400?text=Travis+Head",
+    "player_origin": "Australia",
+    "player_category": "Batsman",
+    "player_speciality": "Left-hand Aggressive Batter",
+    "player_price": 900000
+  },
+  {
+    "player_name": "Kane Williamson",
+    "player_image": "https://placehold.co/400x400?text=Kane+Williamson",
+    "player_origin": "New Zealand",
+    "player_category": "Batsman",
+    "player_speciality": "Right-hand Top-order Batter",
+    "player_price": 850000
+  },
+  {
+    "player_name": "Kagiso Rabada",
+    "player_image": "https://placehold.co/400x400?text=Kagiso+Rabada",
+    "player_origin": "South Africa",
+    "player_category": "Bowler",
+    "player_speciality": "Right-arm Fast Bowler",
+    "player_price": 950000
+  }
+]
