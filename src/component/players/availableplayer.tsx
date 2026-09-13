@@ -1,18 +1,20 @@
 import React from 'react';
+import type { Iplayer } from '../../playerType';
+import { FaUserAlt } from "react-icons/fa";
+import PlayerCard from "./playerCard";
 
-const availableplayer = ({players}) => {
+const Availableplayer = ({players}) => {
     console.log(players, "players from availableproducts")
     return (
-        <div>
+        <div className='grid grid-cols-3 gap-4 mt-7'>
             {
-                players.map((player)=>{
-            return <div>
-                {player.player_name}
-            </div>
+                players.map((player: Iplayer, ind:number)=>{
+            return <PlayerCard key={ind} player={player}/>
+
                 })
             }
         </div>
     );
 };
 
-export default availableplayer;
+export default Availableplayer;
