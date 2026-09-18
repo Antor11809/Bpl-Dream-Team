@@ -5,7 +5,7 @@
     "player_origin": "Bangladesh",
     "player_category": "All-Rounder",
     "player_speciality": "Left-hand Bat / Left-arm Spin",
-    "player_price": 900000
+    "player_price": 900
   },
   {
     "player_name": "Tamim Iqbal",
@@ -13,7 +13,7 @@
     "player_origin": "Bangladesh",
     "player_category": "Batsman",
     "player_speciality": "Left-hand Opening Batter",
-    "player_price": 750000
+    "player_price": 750
   },
   {
     "player_name": "Taskin Ahmed",
@@ -21,7 +21,7 @@
     "player_origin": "Bangladesh",
     "player_category": "Bowler",
     "player_speciality": "Right-arm Fast Bowler",
-    "player_price": 700000
+    "player_price": 700
   },
   {
     "player_name": "Virat Kohli",
@@ -29,7 +29,7 @@
     "player_origin": "India",
     "player_category": "Batsman",
     "player_speciality": "Right-hand Top-order Batter",
-    "player_price": 1200000
+    "player_price": 120
   },
   {
     "player_name": "Rohit Sharma",
@@ -37,7 +37,7 @@
     "player_origin": "India",
     "player_category": "Batsman",
     "player_speciality": "Right-hand Opening Batter",
-    "player_price": 1100000
+    "player_price": 110
   },
   {
     "player_name": "Jasprit Bumrah",
@@ -45,7 +45,7 @@
     "player_origin": "India",
     "player_category": "Bowler",
     "player_speciality": "Right-arm Fast Bowler",
-    "player_price": 1150000
+    "player_price": 115
   },
   {
     "player_name": "Hardik Pandya",
@@ -53,7 +53,7 @@
     "player_origin": "India",
     "player_category": "All-Rounder",
     "player_speciality": "Power Hitter / Right-arm Fast-Medium",
-    "player_price": 1000000
+    "player_price": 100
   },
   {
     "player_name": "Babar Azam",
@@ -61,7 +61,7 @@
     "player_origin": "Pakistan",
     "player_category": "Batsman",
     "player_speciality": "Right-hand Top-order Batter",
-    "player_price": 1050000
+    "player_price": 200
   },
   {
     "player_name": "Kopa Shamsu",
@@ -69,6 +69,6 @@
     "player_origin": "Pakistan",
     "player_category": "Bowler",
     "player_speciality": "Left-arm Fast Bowler",
-    "player_price": 950000
+    "player_price": 300
   }
 ]

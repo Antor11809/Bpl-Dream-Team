@@ -1,8 +1,38 @@
-import React from 'react';
 import { FaUserAlt } from 'react-icons/fa';
-import type { Iplayer } from '../../playerType';
+import type { Iplayer } from '../../types/playerType';
+import { useState, type Dispatch, type SetStateAction } from "react";
+import { toast } from 'react-toastify';
 
-const playerCard = ({ player }: { player: Iplayer }) => {
+interface Iplayercardprops {
+  player: Iplayer;
+  coin: number;
+  setcoin: Dispatch<SetStateAction<number>>;
+  selectedplayers: Iplayer[];
+setselectedplayers: Dispatch<SetStateAction<Iplayer[]>>;
+
+}
+
+const playerCard = ({ player, coin, setcoin, selectedplayers, setselectedplayers }: Iplayercardprops) => {
+
+const [isSelected, setIsSelected] = useState(false);
+console.log(isSelected, setIsSelected, "isSelected, setIsSelected")
+
+const handleselectplayer = () => {
+  const newprice = coin - player.player_price;
+
+ if (newprice >= 0) {
+  setcoin(newprice);
+  setselectedplayers([...selectedplayers, player]);
+  setIsSelected(true);
+  toast.success(`${player.player_name} is purchased successfully`);
+} else {
+  toast.error("Taka nai tui kinte parbi na re gorib");
+}
+
+setselectedplayers([...selectedplayers, player])
+
+
+};
   return (
     <div className="card bg-white shadow-md hover:shadow-xl transition duration-300 border border-blue-100 hover:border-blue-300">
       
@@ -61,9 +91,14 @@ const playerCard = ({ player }: { player: Iplayer }) => {
             ${player.player_price}
           </h2>
 
-          <button className="btn bg-blue-600 hover:bg-blue-700 text-white border-none">
-            Buy Now
-          </button>
+          
+      <button
+   onClick={handleselectplayer}
+  className="btn bg-blue-600 hover:bg-blue-700 text-white border-none"
+  disabled={isSelected}
+  >
+  {isSelected === true ? "Selected" : "Choose player"}
+  </button>
         </div>
 
       </div>
