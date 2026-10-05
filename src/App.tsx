@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Nav from "./component/nav"
 import Players from "./component/players/players"
-import type {Iplayer} from "./types/playerType"
+import type { Iplayer } from "./types/playerType.tsx";
 import { useState } from "react";
 
 const playersFetch = async():Promise<Iplayer[]> => {
@@ -14,7 +14,7 @@ return data;
 function App() {
   // const playerspromise = playersFetch()
   const [playerspromise] = useState(() => playersFetch())
-  const [coin, setcoin] = useState(500)
+  const [coin, setcoin] = useState(5000)
   return (
     <>
   <Nav coin={coin}/>

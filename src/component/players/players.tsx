@@ -1,5 +1,5 @@
 import { use, useState, type Dispatch, type SetStateAction } from "react";
-import type { Iplayer } from "../../types/playerType";
+import type { Iplayer } from "../../types/playerType.tsx";
 import AvailablePlayer from "./availableplayer";
 import SelectedPlayers from "./SelectedPlayers";
 interface playerprops{

@@ -1,47 +1,52 @@
-import { FaUserAlt } from 'react-icons/fa';
-import type { Iplayer } from '../../types/playerType';
+import { FaUserAlt } from "react-icons/fa";
+import type { Iplayer } from "../../types/playerType.tsx";
 import { useState, type Dispatch, type SetStateAction } from "react";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 interface Iplayercardprops {
   player: Iplayer;
   coin: number;
   setcoin: Dispatch<SetStateAction<number>>;
   selectedplayers: Iplayer[];
-setselectedplayers: Dispatch<SetStateAction<Iplayer[]>>;
-
+  setselectedplayers: Dispatch<SetStateAction<Iplayer[]>>;
 }
 
-const playerCard = ({ player, coin, setcoin, selectedplayers, setselectedplayers }: Iplayercardprops) => {
+const PlayerCard = ({
+  player,
+  coin,
+  setcoin,
+  selectedplayers,
+  setselectedplayers,
+}: Iplayercardprops) => {
+  const [isSelected, setIsSelected] = useState(false);
 
-const [isSelected, setIsSelected] = useState(false);
-console.log(isSelected, setIsSelected, "isSelected, setIsSelected")
+  const handleselectplayer = () => {
+    const newprice = coin - player.player_price;
 
-const handleselectplayer = () => {
-  const newprice = coin - player.player_price;
+    if (newprice >= 0) {
+      setcoin(newprice);
+      setselectedplayers([...selectedplayers, player]);
+      setIsSelected(true);
 
- if (newprice >= 0) {
-  setcoin(newprice);
-  setselectedplayers([...selectedplayers, player]);
-  setIsSelected(true);
-  toast.success(`${player.player_name} is purchased successfully`);
-} else {
-  toast.error("Taka nai tui kinte parbi na re gorib");
-}
+      toast.success(`${player.player_name} is purchased successfully`, {
+        position: "top-left",
+      });
+    } else {
+      toast.error("Taka nai tui kinte parbi na re gorib", {
+        position: "top-left",
+      });
+    }
+  };
 
-setselectedplayers([...selectedplayers, player])
-
-
-};
   return (
-    <div className="card bg-white shadow-md hover:shadow-xl transition duration-300 border border-blue-100 hover:border-blue-300">
-      
+    <div className="card bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-gray-200 overflow-hidden">
+
       {/* Player Image */}
       <figure className="px-4 pt-4">
         <img
           src={player.player_image}
-          alt="Shoes"
-          className="rounded-xl w-full h-56 object-cover"
+          alt={player.player_name}
+          className="w-full h-64 rounded-2xl object-cover object-top"
         />
       </figure>
 
@@ -49,18 +54,22 @@ setselectedplayers([...selectedplayers, player])
       <div className="card-body">
 
         {/* Player Name */}
-        <h2 className="card-title text-yellow-500">
-          <FaUserAlt className="text-blue-500" />
+        <h2 className="card-title text-xl font-bold text-gray-800">
+          <FaUserAlt className="text-blue-600" />
           {player.player_name}
         </h2>
 
         {/* Origin & Category */}
-        <div className="flex justify-center items-center gap-4 text-gray-700">
-          {player.player_origin}
+        <div className="flex justify-between items-center gap-4 text-gray-700">
 
-          <button className="Btn bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+          <span className="font-medium">
+            {player.player_origin}
+          </span>
+
+          <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">
             {player.player_category}
-          </button>
+          </span>
+
         </div>
 
         {/* Rating */}
@@ -71,34 +80,39 @@ setselectedplayers([...selectedplayers, player])
         </div>
 
         {/* Speciality */}
-        <div className="flex justify-center items-center gap-4 text-gray-700">
-          {player.player_speciality}
+        <div className="flex justify-between items-center gap-4 text-gray-700">
 
-          <button className="Btn bg-green-100 text-green-700 px-3 py-1 rounded-full">
+          <span>
+            {player.player_speciality}
+          </span>
+
+          <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
             {player.player_origin}
-          </button>
+          </span>
+
         </div>
 
         {/* Description */}
-        <p className="text-gray-500 text-sm">
-          A card component has a figure, a body part, and inside body
-          there are title and actions parts
+        <p className="text-gray-500 text-sm leading-relaxed">
+          A talented player ready to strengthen your team and deliver great
+          performance.
         </p>
 
         {/* Price & Button */}
-        <div className="card-actions justify-between items-center mt-3">
-          <h2 className="font-semibold text-2xl text-blue-600">
+        <div className="card-actions justify-between items-center mt-4">
+
+          <h2 className="font-bold text-2xl text-blue-600">
             ${player.player_price}
           </h2>
 
-          
-      <button
-   onClick={handleselectplayer}
-  className="btn bg-blue-600 hover:bg-blue-700 text-white border-none"
-  disabled={isSelected}
-  >
-  {isSelected === true ? "Selected" : "Choose player"}
-  </button>
+          <button
+            onClick={handleselectplayer}
+            disabled={isSelected}
+            className="btn bg-blue-600 hover:bg-blue-700 text-white border-none rounded-xl px-5 disabled:bg-gray-400 disabled:text-white"
+          >
+            {isSelected ? "Selected" : "Choose Player"}
+          </button>
+
         </div>
 
       </div>
@@ -106,4 +120,4 @@ setselectedplayers([...selectedplayers, player])
   );
 };
 
-export default playerCard;
+export default PlayerCard;

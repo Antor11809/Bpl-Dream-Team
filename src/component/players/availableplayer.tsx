@@ -1,6 +1,5 @@
-import React, { type Dispatch, type SetStateAction } from 'react';
-import { FaUserAlt } from "react-icons/fa";
-import PlayerCard from "./playerCard";
+import { type Dispatch, type SetStateAction } from 'react';
+import PlayerCard from "./PlayerCard";
 import type { Iplayer } from '../../types/playerType';
 
 interface IAvailableprops{

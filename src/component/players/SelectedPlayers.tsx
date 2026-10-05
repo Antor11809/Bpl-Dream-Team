@@ -1,13 +1,24 @@
-import React, { type SetStateAction } from 'react';
+import { type SetStateAction } from 'react';
 import { type Dispatch } from 'react';
 import { TbTrash } from "react-icons/tb";
-import type { Iplayer } from "../../types/playerType";
+import type { Iplayer } from "../../types/playerType.tsx";
 interface Iselectedplayers  {
   selectedplayers:Iplayer[] 
     setselectedplayers: Dispatch<SetStateAction<Iplayer[]>>
 }
 
-const SelectedPlayers = ({ selectedplayers, setselectedplayers }: Iselectedplayers) => {
+const SelectedPlayers = ({
+  selectedplayers,
+  setselectedplayers,
+}: Iselectedplayers) => {
+
+  const handleRemovePlayer = (playerId: number) => {
+    setselectedplayers((prev) =>
+      prev.filter((abc) => abc.player_price !== playerId)
+    );
+  };
+
+  
    return (
   <div className="grid grid-cols-1 gap-7 mt-6">
     {selectedplayers.map((player: Iplayer) => {
@@ -25,7 +36,7 @@ const SelectedPlayers = ({ selectedplayers, setselectedplayers }: Iselectedplaye
             </div>
           </div>
 
-          <span className="text-red-500 font-bold">
+          <span  onClick={() => handleRemovePlayer(player.player_price)} className="text-red-500 font-bold">
             <TbTrash />
           </span>
         </div>
